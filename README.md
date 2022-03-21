@@ -8,6 +8,11 @@ https://github.com/psyoblade/docker-sqoop
 
 _Note: this is the master branch - for a particular Sqoop version always check the related branch_
 
+## build
+```
+docker build --tag lific-sqoop:0.1 .
+```
+
 ## Usage
 
 You'll have to provide the JDBC jars in a volume when running:
