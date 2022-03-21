@@ -1,7 +1,7 @@
 FROM dvoros/hadoop:3.1.0
 MAINTAINER dvoros
-
-USER root
+RUN addgroup -S lific && adduser -S lific -G lific
+USER lific:lific
 
 ENV SQOOP_HOME /usr/local/sqoop
 
@@ -11,7 +11,7 @@ RUN ln -s /usr/local/sqoop-1.4.7.bin__hadoop-2.6.0 $SQOOP_HOME
 ENV PATH $PATH:$HADOOP_HOME/bin:$SQOOP_HOME/bin
 
 COPY bootstrap.sh /etc/bootstrap.sh
-RUN chown root.root /etc/bootstrap.sh
+RUN chown lific.lific /etc/bootstrap.sh
 RUN chmod 700 /etc/bootstrap.sh
 
 CMD ["/etc/bootstrap.sh"]
