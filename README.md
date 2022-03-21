@@ -1,3 +1,6 @@
+# Fork URL
+https://github.com/psyoblade/docker-sqoop
+
 # Apache Sqoop Docker image
 
 [![DockerPulls](https://img.shields.io/docker/pulls/dvoros/sqoop.svg)](https://registry.hub.docker.com/u/dvoros/sqoop/)
